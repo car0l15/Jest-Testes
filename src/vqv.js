@@ -15,13 +15,16 @@
       trabalho na Trybe e mando muito em programação!
       #VQV!'
 */
-let nome = 'Tunico!';
-let idade = '30 anos';
-let frase = 'trabalho na Trybe e mando muito em programação!';
-const vqv = (string, number) => {
-console.log(`Oi, meu nome é ${nome} 
-Tenho ${idade}, 
-${frase} `);
+
+const vqv = (nome, idade) => {
+  if (nome === undefined || idade === undefined) {
+return undefined;
+  }
+ return `Oi, meu nome é ${nome}!
+Tenho ${idade} anos,
+trabalho na Trybe e mando muito em programação!
+#VQV!`;
 };
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/undefined
 
 module.exports = vqv;
