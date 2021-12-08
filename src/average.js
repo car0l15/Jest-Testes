@@ -11,12 +11,14 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */ 
-const average = (num = [4, 7, 6]) => {
-  let soma = 0;
-  for (let i = 0; i < num.length; i += 1) {
-    soma += num[i] / i; 
+const average = (num = []) => {
+ let soma = 0;
+ for (let i = 0; i < num.length; i += 1) {
+  if (num === [] || Number !== num) {
+    return undefined;
  }
- return soma;
+   soma += num[i];
+}
+   return soma;
 };
-console.log(average());
 module.exports = average;
