@@ -11,14 +11,22 @@
     - average([1, 1]) // Retorno: 1;
     - average([1, '2']) // Retorno: undefined;
 */ 
-const average = (num = []) => {
+
+const average = (num) => {
  let soma = 0;
- for (let i = 0; i < num.length; i += 1) {
-  if (num === [] || Number !== num) {
-    return undefined;
- }
-   soma += num[i];
+ if (num.length === 0) {
+  return undefined;
 }
-   return soma;
+ for (let i = 0; i < num.length; i += 1) {
+   if (typeof num[i] !== 'number') {
+     return undefined;
+   }
+  soma += num[i];
+ }
+   return Math.round(soma / num.length);
 };
 module.exports = average;
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/round
+// O Ronald me ajudou muito e juntos conseguimos descobrir pq não estava passando 
+// o meu if tava condicionado de uma maneira errada, como length é = 0, o for não passaria do 0 nunca
+// muito bom desenvolver e enxergar esse pensamento. 

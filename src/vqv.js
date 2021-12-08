@@ -15,7 +15,13 @@
       trabalho na Trybe e mando muito em programação!
       #VQV!'
 */
-
-const vqv = () => {};
+let nome = 'Tunico!';
+let idade = '30 anos';
+let frase = 'trabalho na Trybe e mando muito em programação!';
+const vqv = (string, number) => {
+console.log(`Oi, meu nome é ${nome} 
+Tenho ${idade}, 
+${frase} `);
+};
 
 module.exports = vqv;
