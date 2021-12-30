@@ -34,7 +34,7 @@
 */
 
 const calculator = (number1, number2) => {
-  const divisao = Math.round(number1 / number2);
+  const divisao = Math.floor(number1 / number2);
 const calculos = {
 sum: number1 + number2,
 mult: number1 * number2,
